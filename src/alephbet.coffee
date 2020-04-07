@@ -18,7 +18,7 @@ class AlephBet
       sample: 1.0
       trigger: -> true
       tracking_adapter: adapters.GoogleUniversalAnalyticsAdapter
-      storage_adapter: adapters.LocalStorageAdapter
+      storage_adapter: adapters.PiggyStorageAdapter
 
     constructor: (@options = {}) ->
       Object.defineProperty @, 'user_id', {
