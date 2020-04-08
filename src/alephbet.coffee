@@ -56,7 +56,6 @@ class AlephBet
     activate_variant: (variant) ->
       @_variant_value = @variants[variant]?.activate(this)
       @storage().set("#{@options.name}:variant", variant)
-      @tracking()?.variant_activated(this, variant)
       utils.log("activated variant : #{variant}", "variant value: #{@_variant_value}")
 
 # if experiment conditions match, pick and activate a variant, track experiment start
